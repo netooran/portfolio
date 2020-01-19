@@ -28,7 +28,8 @@ main section {
 }
 
 main section > h1 {
-  writing-mode: sideways-lr;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
   background-color: aliceblue;
   width: 2em;
   height: 100%;
