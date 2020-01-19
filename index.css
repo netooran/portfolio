@@ -30,7 +30,7 @@ main section {
 main section > h1 {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
-  background-color: aliceblue;
+  background-color: aqua;
   width: 2em;
   height: 100%;
   text-align: center;
