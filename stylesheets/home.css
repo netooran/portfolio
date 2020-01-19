@@ -1,0 +1,24 @@
+.home .content h1 {
+  font-size: 2em;
+}
+
+.home .content b {
+  font-size: 2em;
+}
+
+.home .content {
+  flex-direction: column;
+  padding: 4em;
+  font-size: 1em;
+}
+
+.home .fab {
+  padding: 0.3em;
+  font-size: 2.5em;
+  text-decoration: none;
+  color: black;
+}
+
+.home .fab:hover {
+  opacity: 0.6;
+}

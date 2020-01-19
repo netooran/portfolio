@@ -1,5 +1,8 @@
+@import "stylesheets/home.css";
+
 body {
   margin: unset;
+  height: 100%;
 }
 
 main {
@@ -12,7 +15,7 @@ main section {
   flex-direction: row;
 }
 
-main section h1 {
+main section > h1 {
   writing-mode: sideways-lr;
   background-color: aliceblue;
   width: 2em;
@@ -23,9 +26,14 @@ main section h1 {
 }
 
 .content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: aqua;
-  width: calc(100%);
+  width: 100%;
   display: none;
+  box-sizing: border-box;
 }
 
 .active {
@@ -33,5 +41,5 @@ main section h1 {
 }
 
 .active > .content {
-  display: block;
+  display: flex;
 }
