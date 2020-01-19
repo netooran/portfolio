@@ -1,5 +1,15 @@
 @import "stylesheets/home.css";
 
+@media only screen and (max-width: 480px) {
+  main section > h1 {
+    display: none;
+  }
+
+  main section {
+    height: 100vh;
+  }
+}
+
 body {
   margin: unset;
   height: 100%;
@@ -8,6 +18,7 @@ body {
 main {
   display: flex;
   flex-direction: row;
+  box-sizing: border-box;
 }
 
 main section {
