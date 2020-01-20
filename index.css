@@ -11,6 +11,7 @@
 }
 
 body {
+  background-color: aqua;
   margin: unset;
   height: 100%;
   font-family: "Source Code Pro for Powerline", monospace;
@@ -30,7 +31,6 @@ main section {
 main section > h1 {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
-  background-color: aqua;
   width: 2em;
   height: 100%;
   text-align: center;
@@ -43,7 +43,6 @@ main section > h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
   width: 100%;
   display: none;
   box-sizing: border-box;
