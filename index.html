@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
       rel="stylesheet"
@@ -18,62 +19,38 @@
     <title>Sarath's Portfolio</title>
   </head>
   <body>
-    <main>
-      <section class="home active">
-        <h1 tabindex="1">Home</h1>
-        <div class="content">
-          <h1>
-            Hi, I'm <br />
-            <b
-              >Sarath <br />
-              Sasindrakumar</b
-            >
-          </h1>
-          <p>
-            I am a Full Stack Developer, a Traveller and a Photographer based in
-            Bangalore, India.
-          </p>
-          <div class="social">
-            <a
-              href="https://github.com/netooran"
-              target="_blank"
-              class="fab fa-github-square"
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/sarath-vs-935641ab"
-              target="_blank"
-              class="fab fa-linkedin"
-            ></a>
-            <a
-              href="https://www.instagram.com/netooraan"
-              target="_blank"
-              class="fab fa-instagram"
-            ></a>
-            <a
-              href="https://www.facebook.com/netooran"
-              target="_blank"
-              class="fab fa-facebook-square"
-            ></a>
-            <a
-              href="https://twitter.com/SarathVS65"
-              target="_blank"
-              class="fab fa-twitter-square"
-            ></a>
+    <div id="app">
+      <main>
+        <section class="home active">
+          <h1 tabindex="1">Home</h1>
+          <div class="content">
+            <h1>
+              Hi, I'm <br /> <b> {{name.first}} <br /> {{name.last}}</b>
+            </h1>
+            <p>{{description}}</p>
+            <div class="social">
+              <a
+                v-for="(social, index) in socials"
+                :key="index"
+                :href="social.url"
+                target="_blank"
+                :class="social.icon"
+              ></a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="projects">
-        <h1 tabindex="2">Projects</h1>
-        <div class="content"></div>
-      </section>
+        <section class="projects">
+          <h1 tabindex="2">Projects</h1>
+          <div class="content"></div>
+        </section>
 
-      <section class="gallery">
-        <h1 tabindex="3">Gallery</h1>
-        <div class="content"></div>
-      </section>
-    </main>
-
+        <section class="gallery">
+          <h1 tabindex="3">Gallery</h1>
+          <div class="content"></div>
+        </section>
+      </main>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
