@@ -1,3 +1,5 @@
+@import "stylesheets/variables.css";
+
 @media only screen and (min-width: 1024px) {
   .home .content h1,
   .home .content b {
@@ -24,8 +26,7 @@
 }
 
 .home .content b {
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: var(--primary-color);
 }
 
 .home .content {
@@ -36,10 +37,11 @@
 }
 
 .home .fab {
+  text-shadow: var(--text-shadow);
   padding: 0.3em;
   font-size: 2.5em;
   text-decoration: none;
-  color: black;
+  color: var(--main-bg-color);
 }
 
 .home .fab:hover {

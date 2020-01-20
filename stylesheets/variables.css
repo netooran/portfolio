@@ -1,0 +1,7 @@
+:root {
+  --primary-color: aqua;
+  --secondary-color: whitesmoke;
+  --main-bg-color: black;
+  --text-shadow: -1px 0 var(--primary-color), 0 1px var(--primary-color),
+    1px 0 var(--primary-color), 0 -1px var(--primary-color);
+}
