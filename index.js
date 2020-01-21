@@ -14,10 +14,10 @@ const app = new Vue({
   }
 });
 
-document.querySelectorAll("section").forEach(section =>
-  section.querySelector("h1").addEventListener("click", event => {
-    event.preventDefault();
-    document.querySelector(".active").classList.remove("active");
-    section.classList.add("active");
-  })
-);
+document.addEventListener("click", event => {
+  const section = event.target;
+  if (section.tagName !== "SECTION") return;
+  event.preventDefault();
+  document.querySelector(".active").classList.remove("active");
+  section.classList.add("active");
+});
