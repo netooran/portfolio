@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio site for Developer-cum-Photographer",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netooran/portfolio.git"
+  },
+  "author": "Sarath VS <sarathvss65@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/netooran/portfolio/issues"
+  },
+  "homepage": "https://github.com/netooran/portfolio#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
