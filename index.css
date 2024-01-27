@@ -1,0 +1,287 @@
+:root {
+  --black: #14140f;
+  --white: #fff;
+  --dark-green: #053d38;
+  --green: #34675c;
+  --light-green: #a3ccab;
+  --aqua: #00ffff;
+  --orange: #f26800;
+  --soft-orange: #f3b562;
+  --pastel-gray: #d3d3d3;
+  --cream: #f0f1df;
+
+  --spartan: 'League Spartan', sans-serif;
+  --inconsolata: Inconsolata, monospace;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--spartan);
+  font-size: 1.2rem;
+  margin: 0;
+}
+body > * {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+a:hover {
+  color: var(--orange);
+}
+img {
+  width: 100%;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 6rem;
+  font-family: var(--spartan);
+}
+
+@media (min-width: 850px) {
+  body > * {
+    padding: 0 4rem;
+  }
+}
+
+/* Shared */
+
+.button-like {
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 0%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  border: none;
+  color: var(--white);
+  font-family: var(--spartan);
+  font-weight: 700;
+  width: fit-content;
+  display: inline-block;
+}
+.button-like:hover {
+  color: var(--white);
+  background-size: 200%;
+  animation: shimmer 2s 1 linear;
+}
+
+.button-like-secondary {
+  padding: 1rem 2rem;
+  border: 1px solid var(--soft-orange);
+  color: var(--soft-orange);
+  font-family: var(--spartan);
+  font-weight: 700;
+  width: fit-content;
+  display: inline-block;
+}
+.button-like-secondary:hover {
+  color: var(--white);
+  background-size: 200%;
+  animation: shimmer 2s 1 linear;
+}
+.stack {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.stack ul {
+  display: flex;
+  gap: 10px;
+  flex-flow: row wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+.pill {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+}
+
+/* Show card */
+
+.show-card {
+  background-color: #2c2c2c;
+  color: #eee;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.show-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.show-card .details {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 850px) {
+  .show-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+  }
+  .show-card .details {
+    margin-bottom: 0;
+  }
+}
+
+/* header */
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--spartan);
+}
+header .logo {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1rem;
+  flex-basis: 100%;
+  text-align: center;
+}
+header .logo [class*='fa-'] {
+  font-size: 2rem;
+  color: var(--aqua);
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+@media (min-width: 850px) {
+  header .logo {
+    flex-basis: auto;
+    margin-right: auto;
+  }
+}
+
+/* Footer */
+
+footer {
+  padding: 8rem 0;
+  background-color: var(--dark-green);
+  text-align: center;
+  margin-top: 2rem;
+  max-width: 100%;
+}
+footer ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 2em;
+}
+footer h3 {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+footer h3 .dot {
+  display: none;
+}
+footer h3 span:first-child {
+  font-size: 2rem;
+  font-weight: 700;
+}
+footer h3 span:last-child {
+  font-weight: 500;
+}
+footer a {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+@media (min-width: 850px) {
+  footer h3 {
+    flex-flow: row wrap;
+  }
+  footer h3 .dot {
+    display: inline-block;
+  }
+}
+
+/* Intro */
+
+#intro {
+  padding: 8rem 0;
+  gap: 0.4rem;
+}
+#intro h1 {
+  font-size: 3rem;
+  margin: 0;
+  line-height: 3.5rem;
+}
+
+@media (min-width: 850px) {
+  #intro {
+    padding: 12rem 0;
+    gap: 0.8rem;
+  }
+  #intro h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Projects & Experiments */
+
+#projects h2,
+#experiments h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+#projects > p,
+#experiments > p {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+/* Animations */
+
+@keyframes shimmer {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 50%;
+  }
+}
